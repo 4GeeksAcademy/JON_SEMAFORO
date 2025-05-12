@@ -9,3 +9,50 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+/* Contenedor general para centrarlo en pantalla */
+.traffic-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* “Gorra” superior del semáforo */
+#trafficTop {
+  width: 80px;
+  height: 20px;
+  background: #000;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Cuerpo principal */
+#container {
+  width: 80px;
+  padding: 10px 0;
+  background: #000;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilo común de todas las luces */
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #444;   /* apagada */
+  transition: box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+/* Colores base */
+.light.red    { background-color: #900; }
+.light.yellow { background-color: #990; }
+.light.green  { background-color: #090; }
+
+/* Efecto “brillo” cuando está activa */
+.light.active {
+  box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.6);
+}
